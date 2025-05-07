@@ -11,7 +11,7 @@ import academy.kata.app.boot.service.UserService;
 @RequestMapping("/users")
 public class UserController {
 
-    UserService userService;
+    private final UserService userService;
 
     @Autowired
     public UserController(UserService userService) {

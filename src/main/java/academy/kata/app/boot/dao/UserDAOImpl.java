@@ -1,10 +1,11 @@
 package academy.kata.app.boot.dao;
 
-import org.springframework.stereotype.Repository;
 import academy.kata.app.boot.model.User;
+import org.springframework.stereotype.Repository;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+
 import java.util.List;
 
 @Repository

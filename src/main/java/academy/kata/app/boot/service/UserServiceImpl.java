@@ -1,25 +1,21 @@
 package academy.kata.app.boot.service;
 
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
+import academy.kata.app.boot.dao.UserDAO;
+import academy.kata.app.boot.model.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import academy.kata.app.boot.dao.UserDAOImpl;
-import academy.kata.app.boot.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
 @Service
 @Transactional
-@Getter
-@Setter
 public class UserServiceImpl implements UserService {
 
-    private UserDAOImpl userDAO;
+    private final UserDAO userDAO;
 
     @Autowired
-    public UserServiceImpl(UserDAOImpl userDAO) {
+    public UserServiceImpl(UserDAO userDAO) {
         this.userDAO = userDAO;
     }
 
